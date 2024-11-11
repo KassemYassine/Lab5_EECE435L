@@ -26,7 +26,15 @@ def api_update_user():
 @app.route('/api/users/delete/<user_id>', methods = ['DELETE'])
 def api_delete_user(user_id):
     return jsonify(delete_user(user_id))
-
+user1 = {
+"name": "kassem yassine",
+"email": "kmy05@mail.aub.edu",
+"phone": "067765434567",
+"address": "John Doe Street, Innsbruck",
+"country": "Austria"
+}
 if __name__ == "__main__":
     create_db_table()
+    insert_user(user)
+    insert_user(user1)
     app.run(debug=True)
